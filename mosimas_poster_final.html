@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guduza Secondary School - Excellence in Education since 1996.">
+    <title>Guduza Secondary School | Excellence in Education</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #10b981;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), 
+                             url(gud.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #10b981;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-md">GS</div>
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tight heading-font">Guduza</h1>
+                    <p class="text-xs -mt-1 text-emerald-600 font-semibold tracking-widest">SECONDARY SCHOOL</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#home" class="nav-link text-gray-700 hover:text-emerald-600">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-emerald-600">About</a>
+                <a href="#academics" class="nav-link text-gray-700 hover:text-emerald-600">Academics</a>
+                <a href="#results" class="nav-link text-gray-700 hover:text-emerald-600">Matric Results</a>
+                <a href="#location" class="nav-link text-gray-700 hover:text-emerald-600">Location</a>
+                <a href="#admissions" class="nav-link text-gray-700 hover:text-emerald-600">Admissions</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-emerald-600">Contact</a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+            <div class="flex flex-col px-8 gap-6 text-lg font-medium">
+                <a href="#home" onclick="toggleMobileMenu()" class="nav-link">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="nav-link">About Us</a>
+                <a href="#academics" onclick="toggleMobileMenu()" class="nav-link">Academics</a>
+                <a href="#results" onclick="toggleMobileMenu()" class="nav-link">Matric Results</a>
+                <a href="#location" onclick="toggleMobileMenu()" class="nav-link">Location</a>
+                <a href="#admissions" onclick="toggleMobileMenu()" class="nav-link">Admissions</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-bold leading-tight mb-6 heading-font">
+                    Nurturing Excellence,<br>Shaping Futures
+                </h2>
+                <p class="text-xl md:text-2xl mb-12 text-gray-100 max-w-2xl mx-auto">
+                    Since 1996, Guduza Secondary School has been a beacon of academic excellence and character development.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                    <a href="#admissions" class="px-10 py-5 bg-emerald-600 hover:bg-emerald-700 rounded-2xl font-semibold text-lg transition-all duration-300">
+                        Apply for 2027
+                    </a>
+                    <a href="#about" class="px-10 py-5 border-2 border-white hover:bg-white hover:text-gray-900 rounded-2xl font-semibold text-lg transition-all duration-300">
+                        Discover Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-4xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-700 px-5 py-2.5 rounded-full text-sm font-medium mb-6">
+                        <i class="fas fa-school"></i> ESTABLISHED 1996
+                    </div>
+                    <h2 class="text-5xl font-bold mb-8 heading-font">Welcome to Guduza Secondary School</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-10">
+                        We are a premier co-educational institution dedicated to providing holistic education that balances academic rigor with strong moral values and leadership development.
+                    </p>
+                    <div class="grid grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="text-5xl font-bold text-emerald-600">1,922+</div>
+                            <div class="text-sm text-gray-500 mt-2">Students</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-emerald-600">43</div>
+                            <div class="text-sm text-gray-500 mt-2">Educators</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-emerald-600">98.7%</div>
+                            <div class="text-sm text-gray-500 mt-2">Pass Rate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="image (1).jpg" alt="Guduza Secondary School Campus" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics -->
+    <section id="academics" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 heading-font">Academic Programmes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">We follow the CAPS curriculum with enriched learning experiences.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-8">📚</div>
+                    <h3 class="text-2xl font-semibold mb-4">Senior Phase (Grade 8-9)</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Mathematics & Natural Sciences</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Languages & Social Sciences</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Technology & Creative Arts</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-4xl mb-8">🎓</div>
+                    <h3 class="text-2xl font-semibold mb-4">FET Phase (Grade 10-12)</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Physical Sciences & Life Sciences</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Accounting & Business Studies</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> History & Geography</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-4xl mb-8">🏅</div>
+                    <h3 class="text-2xl font-semibold mb-4">Extracurricular Activities</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Sports & Athletics</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Debate & Public Speaking</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i> Arts, Music & Culture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matric Results -->
+    <section id="results" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 heading-font">Matric Results</h2>
+                <p class="text-gray-600">Consistent excellence in National Senior Certificate Examinations</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full max-w-5xl mx-auto text-left border-collapse">
+                    <thead>
+                        <tr class="bg-emerald-600 text-white">
+                            <th class="px-6 py-5 text-sm font-medium">Year</th>
+                            <th class="px-6 py-5 text-sm font-medium">Candidates</th>
+                            <th class="px-6 py-5 text-sm font-medium">Pass Rate</th>
+                            <th class="px-6 py-5 text-sm font-medium">Bachelor Pass</th>
+                            <th class="px-6 py-5 text-sm font-medium">Averages per Learner</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-6 font-semibold">2025</td>
+                            <td class="px-6 py-6">248</td>
+                            <td class="px-6 py-6 font-bold text-emerald-600">98.8%</td>
+                            <td class="px-6 py-6">82.3%</td>
+                            <td class="px-6 py-6">2.1</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-6 font-semibold">2024</td>
+                            <td class="px-6 py-6">231</td>
+                            <td class="px-6 py-6 font-bold text-emerald-600">99.1%</td>
+                            <td class="px-6 py-6">79.7%</td>
+                            <td class="px-6 py-6">2.3</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-6 font-semibold">2023</td>
+                            <td class="px-6 py-6">219</td>
+                            <td class="px-6 py-6 font-bold text-emerald-600">97.7%</td>
+                            <td class="px-6 py-6">76.4%</td>
+                            <td class="px-6 py-6">2.0</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-6 font-semibold">2022</td>
+                            <td class="px-6 py-6">205</td>
+                            <td class="px-6 py-6 font-bold text-emerald-600">98.5%</td>
+                            <td class="px-6 py-6">74.1%</td>
+                            <td class="px-6 py-6">1.9</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-6 font-semibold">2021</td>
+                            <td class="px-6 py-6">198</td>
+                            <td class="px-6 py-6 font-bold text-emerald-600">96.5%</td>
+                            <td class="px-6 py-6">71.8%</td>
+                            <td class="px-6 py-6">2.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-center mt-12 text-sm text-gray-500">
+                * Averages per learner = Number of distinctions achieved per student
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 heading-font">Our Location</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Kabokweni, Mpumalanga</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.5!2d31.124150!3d-25.356200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIxJzIyLjMiUyAzMcKwMDcnMjYuOSJF!5e0!3m2!1sen!2sza!4v1717000000000"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-emerald-600"></i> 
+                            Physical Address
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Guduza Secondary School<br>
+							Insikazi<br>
+                            Kabokweni<br>
+                            Mpumalanga<br>
+                            South Africa
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-sm text-gray-500">Coordinates</p>
+                            <p class="font-medium">25°21'22.3"S 31°07'26.9"E</p>
+                            <p class="text-sm text-gray-500 mt-4">Decimal</p>
+                            <p class="font-medium">-25.356200, 31.124150</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Province</p>
+                            <p class="font-medium">Mpumalanga</p>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=-25.356200,31.124150" 
+                       target="_blank"
+                       class="inline-flex items-center gap-3 bg-emerald-600 text-white px-8 py-4 rounded-2xl hover:bg-emerald-700 transition">
+                        <i class="fas fa-directions"></i>
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions, Contact & Footer remain the same as previous version -->
+
+    <!-- Admissions -->
+    <section id="admissions" class="py-24 bg-emerald-700 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6 heading-font">Join Our Community</h2>
+            <p class="text-xl mb-12">Admissions for Grade 8 and Grade 10 for the 2027 academic year are now open.</p>
+            
+            <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-12 max-w-lg mx-auto">
+                <button onclick="alert('Application form would open here in a live website.')"
+                        class="w-full py-7 bg-white text-emerald-700 rounded-2xl text-xl font-semibold hover:bg-gray-100 transition-all">
+                    Download Application Package
+                </button>
+                <p class="mt-8 text-sm opacity-75">Closing Date: 30 November 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8 heading-font">Get in Touch</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <i class="fas fa-map-marker-alt text-3xl text-emerald-500 mt-1"></i>
+                        <div>
+                            <p class="font-medium">Kabokweni</p>
+                            <p class="text-gray-400">Mpumalanga, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <i class="fas fa-phone text-3xl text-emerald-500 mt-1"></i>
+                        <div>
+                            <p class="font-medium">+27 79 017 8920</p>
+                            <p class="text-gray-400">Monday - Friday, 08:00 - 16:00</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <i class="fas fa-envelope text-3xl text-emerald-500 mt-1"></i>
+                        <div>
+                            <p class="font-medium">guduzasecondary@yahoo.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 p-10 rounded-3xl">
+                <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <input type="text" placeholder="Full Name" required class="w-full px-6 py-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="email" placeholder="Email Address" required class="w-full px-6 py-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <textarea placeholder="Your Message" rows="5" required class="w-full px-6 py-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+                    <button type="submit" class="w-full py-5 bg-emerald-600 hover:bg-emerald-500 rounded-2xl font-semibold text-lg transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <div class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">GS</div>
+                <p class="text-3xl font-bold text-white heading-font">Guduza Secondary School</p>
+            </div>
+            <p>&copy; 2026 Guduza Secondary School. All Rights Reserved.</p>
+            <p class="text-sm mt-3">Kabokweni, Mpumalanga | Proudly developing tomorrow’s leaders since 1996</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert("Thank you for your message! We will respond as soon as possible.");
+            e.target.reset();
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
